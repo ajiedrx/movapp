@@ -11,7 +11,9 @@ import SwiftUI
 struct movappApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MovieHome(
+                movieListViewModel: MovieListViewModel(movieUseCase: Injection.init().provideMovieUseCase())
+            )
         }
     }
 }
